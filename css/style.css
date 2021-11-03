@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+header {
+  padding: 30px 0;
+  background-color: black;
+}
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo a {
+  text-decoration: none;
+  font-size: 46px;
+  color: #0984e3;
+  font-weight: 800;
+  text-shadow: 4px 4px 2px #00cec9;
+}
+.nav-menu ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+.nav-menu ul li:not(:last-child) {
+  margin-right: 20px;
+}
+.nav-menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px #dfe6e9;
+  transition: all 0.5s ease;
+}
+.nav-menu ul li a:hover {
+  color: #ff7675;
+}
+.menu-toggle {
+  font-size: 24px;
+  color: #0984e3;
+  text-decoration: none;
+  display: none;
+}
+.menu-toggle:hover {
+  color: aqua;
+}
+section {
+  padding: 30px 0;
+  height: 80vh;
+  background-image: url("../img/jefferson-santos-9SoCnyQmkzI-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title {
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+  text-shadow: 2px 2px 2px #d63031;
+  margin-top: 50px;
+}
+.center {
+  background-color: #636e72;
+  padding: 10px 0;
+}
+.center a i {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 998px) {
+  .logo a {
+    font-size: 30px;
+  }
+  .nav-menu ul li a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-menu {
+    position: fixed;
+    width: 100%;
+    max-width: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 70px;
+    right: 0;
+    display: block;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: none;
+  }
+  .nav-menu ul li {
+    display: block;
+  }
+  .nav-menu.active {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+  section {
+    height: 40vh;
+  }
+  .title {
+    font-size: 30px;
+  }
+}
